@@ -3,10 +3,14 @@
 # bd=/Users/luser/GoogleDrive/data/atlases/Schaefer100_Thalamus_Striatum
 bd=`pwd`
 segdir=${bd}/fastMNI
+source_atlases_dir=${bd}/source_atlases
 cd ${bd}
 
+
 # Remove previous versions
-rm Schaefer100_ribbon_subcort_*.nii.gz
+rm Schaefer100_ribbon_subcort_LH.nii.gz
+rm Schaefer100_ribbon_subcort_RH.nii.gz
+
 
 # Carry out the segmentation
 echo Carrying out segmentation of the MNI 2mm template
@@ -38,7 +42,9 @@ fslmaths ${segdir}/CSF_seg \
 
 
 # Select ribbon voxels in the Schaefer100 atlas
-fslmaths Schaefer100 -mul ${segdir}/ribbon Schaefer100_ribbon
+fslmaths ${source_atlases_dir}/Schaefer100 \
+        -mul ${segdir}/ribbon \
+        Schaefer100_ribbon
 
 
 # Separate left from right and subtract 50 to the RH
@@ -55,13 +61,13 @@ fslmaths Schaefer100_ribbon -roi  0 45 0 109 0 91 0 1 \
 # and Hippocampus) mask for the tests below
 fslmaths Schaefer100_ribbon -bin Schaefer100_ribbon_mask
 
-fslmaths Thalamus-maxprob-thr25-2mm -add 0 Thalamus
+fslmaths ${source_atlases_dir}/Thalamus-maxprob-thr25-2mm -add 0 Thalamus
 fslmaths Thalamus -bin Thalamus_mask
 
-fslmaths striatum-con-label-thr50-7sub-2mm -add 0 Striatum
+fslmaths ${source_atlases_dir}/striatum-con-label-thr50-7sub-2mm -add 0 Striatum
 fslmaths Striatum -bin Striatum_mask
 
-fslmaths HarvardOxford-sub-maxprob-thr50-2mm -add 0 HO_Subcortical
+fslmaths ${source_atlases_dir}/HarvardOxford-sub-maxprob-thr50-2mm -add 0 HO_Subcortical
 fslmaths HO_Subcortical -bin HO_Subcortical_mask
 
 
