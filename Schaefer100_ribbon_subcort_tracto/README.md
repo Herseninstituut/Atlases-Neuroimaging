@@ -6,7 +6,7 @@ Here is the [github repo of the final Atlas](https://github.com/leonardocerliani
 After downloading the repo, the atlas can be locally recreated using the `do_build_atlas.sh` script, which also explains all the applied procedures
 
 
-![Schaefer100 ribbon + Thalamus + Striatum + Amygdala + Hippocampus](https://github.com/leonardocerliani/Atlases-Neuroimaging/blob/master/Schaefer100_Th_Str_Amy_Hippo_tracto/img/atlas_preview.png?raw=true)
+![Schaefer100 ribbon + Thalamus + Striatum + Amygdala + Hippocampus](https://github.com/leonardocerliani/Atlases-Neuroimaging/blob/master/Schaefer100_ribbon_subcort_tracto/img/atlas_preview.png?raw=true)
 
 
 The [Schaefer100](https://github.com/ThomasYeoLab/CBIG/tree/master/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI) (paper [here](https://www.researchgate.net/publication/320255795_Local-Global_Parcellation_of_the_Human_Cerebral_Cortex_from_Intrinsic_Functional_Connectivity_MRI) and on [arXiv](https://www.biorxiv.org/content/10.1101/135632v2)) represents a wonderful cortical parcellation, since its parcels are organized hierarchically in 100..1000 parcellations, and they refer at all scales to the original Yeo 7/17 resting state functional networks, therefore at least a tentative functional labelling is provided.
