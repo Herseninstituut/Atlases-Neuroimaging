@@ -10,4 +10,6 @@ $FSLDIR/data/atlases
 
 After doing this, the atlas will be available in the Atlas toolbar of FSLview/eyes
 
+A similar procedure can be used to import the atlas in [Mango](http://ric.uthscsa.edu/mango/atlas_spec.html)
+
 ![atlas_LH](img/atlas_LH.jpg)
