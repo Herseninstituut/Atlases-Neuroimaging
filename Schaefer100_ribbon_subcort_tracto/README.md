@@ -2,7 +2,7 @@
 
 To carry out probabilistic tractography for our particular topic of Misophonia, I need an atlas with cortex as well as several subcortical regions - Thalamus, Striatum, Amygdala, Hippocampus.
 
-Here is the [github repo of the final Atlas](https://github.com/leonardocerliani/Atlases-Neuroimaging/tree/master/Schaefer100_Th_Str_Amy_Hippo_tracto).
+Here is the github repo of the final Atlas.
 After downloading the repo, the atlas can be locally recreated using the `do_build_atlas.sh` script, which also explains all the applied procedures
 
 
